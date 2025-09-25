@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="4.5.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Navistar.Model.common\Navistar.Model.common.csproj" />
+    <ProjectReference Include="..\Navistar.Model.Request\Navistar.Model.Request.csproj" />
+    <ProjectReference Include="..\Navistar.Model.Response\Navistar.Model.Response.csproj" />
+    <ProjectReference Include="..\Navistar.Utils.Core\Navistar.Utils.Core.csproj" />
+  </ItemGroup>
+
+</Project>

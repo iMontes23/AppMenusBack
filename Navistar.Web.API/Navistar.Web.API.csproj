@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+    <UserSecretsId>7a52bbf1-0f09-4540-860c-a06b7746aa52</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
+    <PackageReference Include="Braintree" Version="5.6.0" />
+    <PackageReference Include="EPPlus" Version="4.5.3.3" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.32.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Rewrite" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Azure.Devices.Shared" Version="1.27.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.29.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.9" />
+    <PackageReference Include="Microsoft.Owin.Security.OpenIdConnect" Version="4.2.0" />
+    <PackageReference Include="Microsoft.PowerBI.Api" Version="3.22.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="NSwag.ApiDescription.Client" Version="13.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Navistar.Business.CoreImp\Navistar.Business.CoreImp.csproj" />
+    <ProjectReference Include="..\Navistar.Business.Core\Navistar.Business.Core.csproj" />
+    <ProjectReference Include="..\Navistar.DAO.CoreImp\Navistar.DAO.CoreImp.csproj" />
+    <ProjectReference Include="..\Navistar.DAO.Core\Navistar.DAO.Core.csproj" />
+    <ProjectReference Include="..\Navistar.DataContext\Navistar.DataContext.csproj" />
+    <ProjectReference Include="..\Navistar.Model.common\Navistar.Model.common.csproj" />
+    <ProjectReference Include="..\Navistar.Model.Factory\Navistar.Model.Factory.csproj" />
+    <ProjectReference Include="..\Navistar.Model.Request\Navistar.Model.Request.csproj" />
+    <ProjectReference Include="..\Navistar.Model.Response\Navistar.Model.Response.csproj" />
+    <ProjectReference Include="..\Navistar.Repository.CargaImp\Navistar.Repository.CargaImp.csproj" />
+    <ProjectReference Include="..\Navistar.Repository.Carga\Navistar.Repository.Carga.csproj" />
+    <ProjectReference Include="..\Navistar.Utils.Logger\Navistar.Utils.Logger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="logs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mastercon">
+      <HintPath>..\Navistar.Utils.Core\dll\Mastercon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://gitlab.com/sbenv/veroxis/docker-seq/-/raw/HEAD/docker-seq.schema.json" /></VisualStudio></ProjectExtensions>
+
+</Project>

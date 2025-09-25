@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Cells" Version="21.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.10" />
+    <PackageReference Include="Open-XML-SDK" Version="2.9.1" />
+    <PackageReference Include="PdfSharp" Version="1.50.5147" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Navistar.Model.common\Navistar.Model.common.csproj" />
+    <ProjectReference Include="..\Navistar.Model.Response\Navistar.Model.Response.csproj" />
+    <ProjectReference Include="..\Navistar.Utils.Logger\Navistar.Utils.Logger.csproj" />
+  </ItemGroup>
+
+</Project>

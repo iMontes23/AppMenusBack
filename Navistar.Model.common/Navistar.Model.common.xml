@@ -1,0 +1,748 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Navistar.Model.common</name>
+    </assembly>
+    <members>
+        <member name="T:Navistar.Model.common.Autorizacion.Solicitud">
+            <summary>
+            Clase tipo entidad que representa las solicitudes realizadas a un administrador
+            </summary>
+            <remarks>Si el distribuidor desea remplazar la información de un periodo presentado, este debera realizar una solicitud</remarks>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.Tipo">
+            <value>
+            Tipo de solicitud: DISTRIBUIDOR
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.Estatus">
+            <summary>
+            Estatus de la solicitud: Proceso, Autorizada, Rechazada, Cancelada
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.DistribuidorCodigo">
+            <value>
+            Código del distribuidor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.DistribuidorNombre">
+            <value>
+            Nombre, razón social del distribuidor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.UserName">
+            <value>
+            Nombre del usuario solicitante
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.AutorizadorId">
+            <value>
+            Identificador del usuario quien autoriza
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.AutorizadorNombre">
+            <value>
+            Nombre del usuario quien autoriza
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.Ejercicio">
+            <value>
+            Ejercicio del período solicitado
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.Periodo">
+            <value>
+            Indica el período desde donde se comenzará el remplazo de información hasta el último periodo presentado por el distribuidor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.Solicitados">
+            <value>
+            Lista de las plantillas, desde el período solicitado hasta el último presentado por el distribuidor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.ComentarioSolicitante">
+            <value>
+            Comentarios adicionales del solicitante
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.Solicitud.ComentarioAutorizador">
+            <value>
+            Motivo por el cual se rechazó la solicitud
+            </value>
+        </member>
+        <member name="M:Navistar.Model.common.Autorizacion.Solicitud.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Autorizacion.SolicitudMaestra">
+            <summary>
+             Clase de tipo entidad que representa los valores reportados en las plantillas.
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudMaestra.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudMaestra.DistribuidorCodigo">
+            <summary>
+            Código del distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudMaestra.SucursalCodigo">
+            <summary>
+            Código de la sucursal (GFX)
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudMaestra.Cuenta">
+            <summary>
+            Identificador de la cuenta
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Autorizacion.SolicitudPeriodo">
+            <summary>
+            Clase tipo entidad que representa los periodos solicitados a remplazar
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudPeriodo.Id">
+            <value>
+            Identificador de la clase
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudPeriodo.Ejercicio">
+            <value>
+            Año del período solicitado
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudPeriodo.Periodo">
+            <value>
+            Mes solicitado
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudPeriodo.ArchivoNombre">
+            <value>
+            Nombre del archivo
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudPeriodo.ArchivoRuta">
+            <value>
+            Ruta del servidor donde se encuentra el archivo
+            </value>
+        </member>
+        <member name="T:Navistar.Model.common.Autorizacion.SolicitudReporte">
+            <summary>
+            Clase de tipo entidad que representa los datos del reporte con el cual será remplazado el período
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.UserName">
+            <value>
+            Nombre del usuario solicitante
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.Plantilla">
+            <summary>
+            Plantilla que se utilizó para reportar el período
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.DisCodigo">
+            <summary>
+            Código del distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.Distribuidor">
+            <summary>
+            Código y nombre del distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.Ejercicio">
+            <summary>
+            Año del período solicitado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.Periodo">
+            <summary>
+            Mes solicitado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.ArchivoNombre">
+            <summary>
+            Nombre del archivo
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.ArchivoRuta">
+            <summary>
+            Ruta del servidor donde se encuentra el archivo
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Autorizacion.SolicitudReporte.Estatus">
+            <summary>
+            Estatus del reporte: POR_PROCESAR, PROCESADO, POR_AUTORIZAR, AUTORIZADO, RECHAZADO
+            </summary>
+        </member>
+        <member name="M:Navistar.Model.common.Autorizacion.SolicitudReporte.#ctor">
+            <summary>
+            Constructor por defecto 
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Base">
+            <summary>
+            Super clase de la cual se heredan los atributos básicos de la aplicación
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Base.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Base.Creacion">
+            <summary>
+            Fecha de alta
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Base.Actualizacion">
+            <summary>
+            Fecha de la última modificación al objeto
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Carga.CalculoAdministrador">
+            <summary>
+            Clase de tipo entidad que representan los valores de las celdas de la plantilla reportada por el administrador cada período.
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.Creacion">
+            <summary>
+            Fecha de registro
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.Actualizacion">
+            <summary>
+            Fecha de la última modificación
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.Codigo">
+            <summary>
+            Código del distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.IdUnidadNegocio">
+            <summary>
+            Identificador de la unidad de negocio a la que pertenece
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.UnidadNegocio">
+            <summary>
+            Unidad de negocio a la que pertenece
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.IdUnidadMedida">
+            <summary>
+            Identificador de la unidad de medida a la que pertenece
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.UnidadMedida">
+            <summary>
+            Unidad de medida a la que pertenece
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.IdGrupo">
+            <summary>
+            Identificador del grupo al que pertenece
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.Grupo">
+            <summary>
+            Grupo al que pertenece (tabla)
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.Coordenada">
+            <summary>
+            Ubicación en la plantilla columna y fila.
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.CalculoAdministrador.Plantilla">
+            <summary>
+            Versión de la plantilla que se utilizo
+            </summary>
+        </member>
+        <member name="M:Navistar.Model.common.Carga.CalculoAdministrador.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Carga.Maestra">
+            <summary>
+            Clase de tipo entidad que representa los valores reportados en las plantillas de los distribuidores.
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.DistribuidorCodigo">
+            <summary>
+            Código del distribuidores
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.SucursalCodigo">
+            <summary>
+            Código del GFX relacionado al distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.Cuenta">
+            <summary>
+            Cuenta que se reporta el distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.Ejercicio">
+            <summary>
+            Año reportado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.Periodo">
+            <summary>
+            Mes reportado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.Valor">
+            <summary>
+            Cantidad o unidades reportada en la cuenta por el distribuidor, valor de la celda
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.CalculoAdmin">
+            <summary>
+            Cálculo al que pertenece, si el valor de Reporte es diferente a null, el cálculo es null y viceversa.
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Maestra.Reporte">
+            <summary>
+            Período reportado
+            </summary>
+        </member>
+        <member name="M:Navistar.Model.common.Carga.Maestra.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Carga.Reporte">
+            <summary>
+            Clase de tipo entidad que representa los datos principales de la plantilla ingresada al sistema.
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.Plantilla">
+            <summary>
+            Plantilla utilizada
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.DistribuidorCodigo">
+            <value>
+            Código del distribuidor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.DistribuidorNombre">
+            <value>
+            Nombre, razón social del distribuidor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.UserName">
+            <value>
+            Identificador del usuario en sesión
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.Distribuidor">
+            <summary>
+            Datos del distribuidor, atributo auxiliar no mapeado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.Ejercicio">
+            <summary>
+            Año reportado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.Periodo">
+            <summary>
+            Mes reportado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.ArchivoNombre">
+            <summary>
+            Nombre de archivo adjunto
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.ArchivoRuta">
+            <summary>
+            Ubicación del archivo en el servidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.Reporte.Estatus">
+            <summary>
+            Estatus del reporte: POR_PROCESAR, PROCESADO, POR_AUTORIZAR, AUTORIZADO, RECHAZADO
+            </summary>
+        </member>
+        <member name="M:Navistar.Model.common.Carga.Reporte.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Carga.ReporteHistorial">
+            <summary>
+            Clase que contiene los cambios realizados al reporte por periodo de un distribuidor, 
+            a través de la autorización de una solicitud de cambio
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.Creacion">
+            <summary>
+            Fecha en que se creó la versión (se respaldó la versión)
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.Version">
+            <summary>
+            Consecutivo que se asigna cada vez que una solicitud de cambio es autorizada
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.Plantilla">
+            <summary>
+            Plantilla con la que se realizó el reporte
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.DistribuidorCodigo">
+            <value>
+            Código del distribuidor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.DistribuidorNombre">
+            <value>
+            Nombre, razón social del distribuidor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.UserName">
+            <value>
+            Identificador del usuario en sesión
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.Reporte">
+            <summary>
+            Identificador del reporte al que pertenece el historial
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteHistorial.SolicitudPeriodo">
+            <summary>
+            Identificador con el cual se autorizó el cambio
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Carga.ReporteMaestraHistorial">
+            <summary>
+            Clase de tipo entidad que contiene los cambios realizados losa valores de las cuentas por periodo de un distribuidor, 
+            a través de la autorización de una solicitud de cambio.
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.DistribuidorCodigo">
+            <summary>
+            Código del distribuidores
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.SucursalCodigo">
+            <summary>
+            Código del GFX relacionado al distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.Cuenta">
+            <summary>
+            Cuenta que se reporta el distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.Ejercicio">
+            <summary>
+            Año reportado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.Periodo">
+            <summary>
+            Mes reportado
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.Valor">
+            <summary>
+            Cantidad o unidades reportada en la cuenta por el distribuidor, valor de la celda
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.Reporte">
+            <summary>
+            Período reportado del historial
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Carga.ReporteMaestraHistorial.CalculoAdministrador">
+            <summary>
+            Cálculo al que pertenece, si el valor de Reporte es diferente a null, el cálculo es null y viceversa.
+            </summary>
+        </member>
+        <member name="M:Navistar.Model.common.Carga.ReporteMaestraHistorial.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Catalogo.Categoria">
+            <summary>
+            Clase de tipo entidad que representa la agrupación de las tablas en la plantilla distribuidor y las hojas en la plantilla del administrador.
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Catalogo.Cuenta">
+            <summary>
+            Clase de tipo entidad que representa las cuentas que reportan los distribuidores (valores de las celdas de la plantilla distribuidor)
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Catalogo.Grupo">
+            <summary>
+            Clase de tipo entidad que representa las tablas en las plantillas.
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Catalogo.SubGrupo">
+            <summary>
+            Clase de tipo entidad que representa una fila en las tablas de la plantilla distribuidor.
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Catalogo.UnidadMedida">
+            <summary>
+            Clase de tipo entidad que representa los tipos de medidas de los valores de las cuentas (unidades, importes, porcentaje)
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Catalogo.UnidadNegocio">
+            <summary>
+            Clase de tipo entidad que representa las líneas de negocio, columnas en las plantillas.
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Configuracion.Coordenada">
+            <summary>
+            Clase de tipo entidad que representa la posición donde se encuentra el valor en la plantilla, por ejemplo: B5
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Coordenada.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Coordenada.X">
+            <summary>
+            Columna de la plantilla
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Coordenada.Y">
+            <summary>
+            Fila de la plantilla
+            </summary>
+        </member>
+        <member name="M:Navistar.Model.common.Configuracion.Coordenada.#ctor">
+            <summary>
+            Constructor por defecto
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Configuracion.General">
+            <summary>
+            Clase de tipo entidad que representa los datos base para el correcto funcionamiento de la aplicación
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.Id">
+            <summary>
+            Identificador de la clase
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.AnioInicio">
+            <summary>
+            Indica el ejercicio inicial, dato utilizado para los filtros por ejercicio
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.RutaArchivoAdministrador">
+            <summary>
+            Directorio en el servidor donde se almacenan los archivos de los usuarios administradores
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.RutaTempAdministrador">
+            <summary>
+            Directorio en el servidor donde se almacenan los archivos de los usuarios administradores que no han sido validados
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.RutaArchivoDistribuidor">
+            <summary>
+            Directorio en el servidor donde se almacenan los archivos de los distribuidores
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.RutaTempDistribuidor">
+            <summary>
+            Directorio en el servidor donde se almacenan los archivos de los distribuidores que no han sido validados
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.RutaArchivoSolicitud">
+            <summary>
+            Directorio en el servidor donde se almacenan los archivos de las solicitudes de los distribuidores
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.RutaTempSolicitud">
+            <summary>
+            Directorio en el servidor donde se almacenan los archivos de las solicitudes de los distribuidores que no han sido validados
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.DistribuidorPlantilla">
+            <summary>
+            Nombre la plantilla del distribuidor
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.AdministradorPlantilla">
+            <summary>
+            Nombre la plantilla del administrador
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.General.TamanoMax">
+            <summary>
+            Tamaño máximo permitido para un archivo que se desea adjuntar en el sistema en (MB)
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Configuracion.Validacion">
+            <summary>
+            Clase que representa las validaciones aplicadas a la plantilla
+            </summary>
+            <remarks>
+            Resultados de la suma de celdas (coordenadas) o una comparación de un valor agregado
+            </remarks>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Validacion.Id">
+            <value>
+            Identificador de la clase
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Validacion.OperadorRelacional">
+            <value>
+            Operador a aplicar en la compración
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Validacion.Comparacion">
+            <value>
+            Indica si el valor A sera comparado con el resultado de una coordenada(s) o un valor
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Validacion.CoordenadasA">
+            <value>
+            Representa el resultado a comparar
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Validacion.CoordenadasB">
+            <value>
+            Representa el valor de la lista o coordenada con que se compara A
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Configuracion.Validacion.ValorB">
+            <value>
+            Indica si el valor A sera comparado con el resultado de una lista, 
+            coordenada o valor
+            </value>
+        </member>
+        <member name="T:Navistar.Model.common.Enum.EstatusSolicitudEnum">
+            <summary>
+            Enumerado que con tiene los diferentes estatus por los cuales puede pasar una solicitud
+            </summary>
+            <value>
+            Proceso (al crearse la solicitud), 
+            Autorizada/Rechazada (Cambio de estatus por un administrador), 
+            Cancelada (El distribuidor puede cancelar una solicitud que sigue en proceso)
+            </value>
+        </member>
+        <member name="F:Navistar.Model.common.Enum.MsgEnum.ARCHIVO_ERR_001">
+            Generales Archivo  *
+        </member>
+        <member name="F:Navistar.Model.common.Enum.MsgEnum.EXCEL_ERR_001">
+            Generales Excel  *
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Navistar.Model.common.Enum.RelacionalEnum" -->
+        <member name="T:Navistar.Model.common.Enum.TipoComparacionEnum">
+            <summary>
+            Enumerador que indica si el resultado sera apartir de una lista de celdas (coordenadas),
+            una celda (coordenada) o una valor proporcionado
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Enum.TipoSolicitudEnum">
+            <summary>
+            Enumerador que contiene los tipos de solicitudes de autorización
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Reporte.TokenJson">
+            <summary>
+            Clase de que representa los Tokens generados por los usuario al utilizar el servicio de autentificación de Azure
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Reporte.TokenJson.Dyy">
+            <summary>
+            Nombre del usuario quien se autentifico
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Reporte.TokenJson.UserName">
+            <summary>
+            Nombre del usuario quien se autentifico
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Reporte.TokenJson.Email">
+            <summary>
+            Correo electrónico del usuario
+            </summary>
+        </member>
+        <member name="T:Navistar.Model.common.Seguridad.Usuario">
+            <summary>
+            Clase que contiene los datos básicos de un usuario en el sistema
+            </summary>
+        </member>
+        <member name="P:Navistar.Model.common.Seguridad.Usuario.UserName">
+            <value>
+            Identificador del usuario en el sistema
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Seguridad.Usuario.Nombre">
+            <value>
+            Nombre de usuario
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Seguridad.Usuario.Paterno">
+            <value>
+            Apellido paterno
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Seguridad.Usuario.Materno">
+            <value>
+            Apellido materno
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Seguridad.Usuario.Correo">
+            <value>
+            Correo electrónico
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Seguridad.Usuario.CodigoDistribuidor">
+            <value>
+            Código asignado al GFX
+            </value>
+        </member>
+        <member name="P:Navistar.Model.common.Seguridad.Usuario.RutaSesion">
+            <value>
+            Ruta temporal por sesión de usuario
+            </value>
+        </member>
+    </members>
+</doc>
