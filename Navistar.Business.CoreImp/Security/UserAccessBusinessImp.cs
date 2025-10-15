@@ -12,7 +12,6 @@ namespace Navistar.Business.CoreImp.Security
 {
     public class UserAccessBusinessImp : IUserAccessBusiness
     {
-
         private readonly IUserAccessRepository _userAccessRepository;
         private ILog _log;
 
@@ -22,10 +21,8 @@ namespace Navistar.Business.CoreImp.Security
             _log = new Navistar.Utils.Logger.Logger().GetLog();
         }
 
-
         public async Task<UserInformationDTO> GetUserInformation(string userID)
         {
-
             UserInformationDTO userInformation = await _userAccessRepository.GetUserInformation(userID);
 
             if (userInformation == null)
@@ -36,8 +33,6 @@ namespace Navistar.Business.CoreImp.Security
 
             return userInformation;
         }
-
-
 
         public async Task<List<UserApplicationDTO>> GetUserMenuItems(string userID)
         {
@@ -72,7 +67,7 @@ namespace Navistar.Business.CoreImp.Security
 
                 application.Initials = NameInitialsExtractor.GetInitials(application.Application);
                 application.ApplicationOptions = null;
-                application.MenuItems = parent.Items;
+                application.MenuItems = parent.Items;                
                 result.Add(application);
             }
 
@@ -89,6 +84,11 @@ namespace Navistar.Business.CoreImp.Security
                     Name = item.ModuleDesc,
                     Url = item.URL,
                     UrlTarget = item.URLTarget,
+                    DescripcionOpcion = item.DescripcionOpcion,
+                    Objetivo = item.Objetivo,
+                    Category = item.Category,
+                    nombreMenu = item.nombreMenu,
+                    nombreModulo = item.nombreModulo,
                     Items = null
                 };
 
@@ -98,7 +98,6 @@ namespace Navistar.Business.CoreImp.Security
                 }
                 return;
             }
-
 
             if (levelIndex >= levels.Length) return;
 
@@ -119,6 +118,11 @@ namespace Navistar.Business.CoreImp.Security
                     Name = name,
                     Url = isOption ? item.URL : null,
                     UrlTarget = isOption ? item.URLTarget : null,
+                    DescripcionOpcion = isOption ? item.DescripcionOpcion : null,
+                    Objetivo = isOption ? item.Objetivo : null,
+                    Category = item.Category,
+                    nombreMenu = item.nombreMenu,
+                    nombreModulo = item.nombreModulo,
                     Items = isOption ? null : new List<MenuItemDTO>()
                 };
                 parent.Items.Add(existingItem);
@@ -139,8 +143,9 @@ namespace Navistar.Business.CoreImp.Security
         {
             IEnumerable<UserApplicationDTO> menuItems = await _userAccessRepository.GetUserMenuItems(userID, appCode);
             if (!menuItems.Any())
+            {
                 return new List<UserApplicationDTO>();
-            
+            }
             return BuildMenuHierarchy(menuItems);
         }
     }

@@ -267,7 +267,10 @@ namespace Navistar.Repository.CargaImp.Security
                         parameters,
                         commandType: CommandType.StoredProcedure
                     );
-                
+                _log.Info("---------------------------------------------------------");
+                _log.Info("userID: " + userID + " appCode: " + appCode);
+                _log.Info("Descripciones: " + string.Join(", ", menus.Select(m => m.DescripcionOpcion)));
+                _log.Info("---------------------------------------------------------");
                 return menus;
             }
             catch (Exception ex)

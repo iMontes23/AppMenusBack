@@ -58,7 +58,6 @@ namespace Navistar.Repository.CargaImp.Menu
                   SpNamesDB.GET_ARBOL_MENUS_APPS,
                   commandType: CommandType.StoredProcedure
               );
-                
                 return menusApps;
             }
         }

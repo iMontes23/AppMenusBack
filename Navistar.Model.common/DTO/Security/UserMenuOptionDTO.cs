@@ -19,5 +19,11 @@
 
         public string Application { get; set; }
 
+        // ICG: Atributo de la descripcion
+        public string DescripcionOpcion { get; set; }
+        public string Objetivo { get; set; }
+         public string nombreMenu { get; set; }
+          public string nombreModulo { get; set; }
+
     }
 }

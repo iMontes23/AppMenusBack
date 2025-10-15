@@ -64,7 +64,6 @@ namespace Navistar.Business.CoreImp.Menu
                 _log.Info($"{_CLASE}:::GetEstructuraMenusApp -> Cargando aplicaciones activas...");
                 var appsLocal = await _menuRepository.GetEstructuraMenusApp();
                 var menusRaiz = GeneraEstructura(appsLocal);
-
                 //var tasks = menus.Select(m => ConsultaMenusGuardian(m ,userID));
                 //await Task.WhenAll(tasks);
                 foreach (var menu in menusRaiz)
@@ -144,7 +143,11 @@ namespace Navistar.Business.CoreImp.Menu
                 {
                     Nombre = item.Name,
                     Codigo = item.AppCode,
-                    Descripcion = null,
+                    Descripcion = item.DescripcionOpcion,
+                    Objetivo = item.Objetivo,
+                    Category = item.Category,
+                    nombreMenu = item.nombreMenu,
+                    nombreModulo = item.nombreModulo,
                     EsApp = (item.Items == null || item.Items.Count == 0),
                     Url = item.Url
                 };
